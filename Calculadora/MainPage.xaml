@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+
+            <Label Text="Calculadora de IMC" 
+                   FontSize="22" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+
+            <!-- Entrada de Peso -->
+            <Label Text="Introduce tu peso (kg):" />
+            <Entry x:Name="PesoEntry" 
+                   Keyboard="Numeric" 
+                   Placeholder="Ej: 70" />
+
+            <!-- Entrada de Altura -->
+            <Label Text="Introduce tu altura (m):" />
+            <Entry x:Name="AlturaEntry" 
+                   Keyboard="Numeric" 
+                   Placeholder="Ej: 1.75" />
+
+            <!-- Botón de Cálculo -->
+            <Button Text="Calcular IMC" 
+                    Clicked="OnCalcularClicked" />
+
+            <!-- Etiquetas de Resultado y Categoría -->
+            <Label x:Name="ResultadoLabel" 
+                   FontSize="18" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="CategoriaLabel" 
+                   FontSize="16" 
+                   HorizontalOptions="Center" />
+
+            <!-- Imagen que cambia según el IMC -->
+            <Image x:Name="ImagenImage" 
+                   HeightRequest="150" 
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
